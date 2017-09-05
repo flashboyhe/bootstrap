@@ -1,0 +1,74 @@
+<div class="page-body">
+
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="widget">
+                <div class="widget-header  with-footer">
+                    <span class="widget-caption">{{hello}}</span>
+                    <div class="widget-buttons">
+                        <a href="#" data-toggle="maximize">
+                            <i class="fa fa-expand"></i>
+                        </a>
+                        <a href="#" data-toggle="collapse">
+                            <i class="fa fa-minus"></i>
+                        </a>
+                        <!--<a href="#" data-toggle="dispose">-->
+                        <!--<i class="fa fa-times"></i>-->
+                        <!--</a>-->
+                    </div>
+                </div>
+                <div class="widget-body">
+                    <div class="flip-scroll">
+                        <table class="table table-bordered table-striped table-condensed flip-content table-hover">
+                            <thead class="flip-content bordered-palegreen">
+                            <tr>
+                                <th class="text-center">
+                                    序号
+                                </th>
+                                <th class="text-center">
+                                    图片
+                                </th>
+                                <th class="numeric text-center" colspan="2">
+                                    标题
+                                </th>
+                                <th class="numeric text-center" colspan="2">
+                                    日期
+                                </th>
+                                <th class="numeric text-center" colspan="2">
+                                    编辑
+                                </th>
+                                <th class="numeric text-center" colspan="2">
+                                    删除
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="s in stu |orderBy:'url'">
+                                <th class="text-center">
+                                    {{$index}}
+                                </th>
+                                <th class="text-center">
+                                    {{s.url}}
+                                </th>
+                                <th class="numeric text-center" colspan="2">
+                                    {{s.title}}
+                                </th>
+                                <th class="numeric text-center" colspan="2">
+                                    {{num}}
+                                </th>
+                                <th class="numeric text-center" colspan="2">
+                                    <button class="btn btn-sm btn-info"><i class="fa fa-edit"></i></button>
+                                </th>
+                                <th class="numeric text-center" colspan="2">
+                                    <button class="btn btn-sm btn-danger"><i class="fa fa-trash-o"></i></button>
+                                </th>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
